@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Undangan Pernikahan Spesial</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div id="cover-page">
+        <div class="cover-content">
+            <h1>The Wedding Of</h1>
+            <h2>Akep Sodaga Putra & Fani Dwi Ardani</h2>
+            <p>Sabtu, 25 Desember 2025</p>
+            <button id="open-invitation">Buka Undangan</button>
+        </div>
+    </div>
+
+    <div id="main-content" class="hidden">
+        <audio id="background-music" loop>
+            <source src="WANGI RINDU.mp3" type="audio/mpeg">
+            Browser Anda tidak mendukung elemen audio.
+        </audio>
+
+        <section id="hero" class="fade-in">
+            <div class="hero-text">
+                <p class="animate-on-scroll">Dengan memohon rahmat dan ridho Allah SWT,</p>
+                <p class="animate-on-scroll">kami mengundang Bapak/Ibu/Saudara/i untuk hadir dalam pernikahan putra-putri kami:</p>
+            </div>
+        </section>
+
+        <section id="groom-bride" class="content-section">
+            <div class="couple-info animate-on-scroll">
+                <h3>Akep Sodaga Putra</h3>
+                <p>Putra pertama dari Bapak [Nama Ayah Akep] & Ibu [Nama Ibu Akep]</p>
+            </div>
+            <p class="and-symbol animate-on-scroll">&</p>
+            <div class="couple-info animate-on-scroll">
+                <h3>Fani Dwi Ardani</h3>
+                <p>Putri kedua dari Bapak [Nama Ayah Fani] & Ibu [Nama Ibu Fani]</p>
+            </div>
+        </section>
+
+        <section id="event-details" class="content-section">
+            <h2 class="animate-on-scroll">Detail Acara</h2>
+
+            <div class="event-card animate-on-scroll">
+                <h3>Akad Nikah</h3>
+                <p><strong>Hari, Tanggal:</strong> Sabtu, 25 Desember 2025</p>
+                <p><strong>Waktu:</strong> 09:00 WIB</p>
+                <p><strong>Lokasi:</strong> Jl. Tim. Indah, Sido Mulyo, Kec. Gading Cemp kota Bengkulu</p>
+            </div>
+
+            <div class="event-card animate-on-scroll">
+                <h3>Resepsi Pernikahan</h3>
+                <p><strong>Hari, Tanggal:</strong> Sabtu, 25 Desember 2025</p>
+                <p><strong>Waktu:</strong> 09:00 - Selesai WIB</p>
+                <p><strong>Lokasi:</strong> kediaman mempelai laki-laki, desa embacang baru</p>
+                <a href="https://www.google.com/maps/dir//-2.8565126,102.8060766/@-2.8563342,102.8065423,18.75z?entry=ttu&g_ep=EgoyMDI1MDYxMS4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="map-button">Lihat di Google Maps</a>
+            </div>
+        </section>
+
+        <section id="photo-gallery" class="content-section">
+            <h2 class="animate-on-scroll">Momen Bahagia Kami</h2>
+            <div class="gallery-grid animate-on-scroll">
+                <img src="foto 2.jpeg" alt="Momen Pernikahan 1">
+                <img src="foto 3.jpeg" alt="Momen Pernikahan 2">
+                <img src="foto 4.jpeg" alt="Momen Pernikahan 3">
+                <img src="foto 6.jpeg" alt="Momen Pernikahan 4">
+            </div>
+        </section>
+        <section id="countdown" class="content-section">
+            <h2 class="animate-on-scroll">Menuju Hari Bahagia</h2>
+            <div id="countdown-timer" class="animate-on-scroll">
+                <div class="countdown-item">
+                    <span id="days">00</span>
+                    <label>Hari</label>
+                </div>
+                <div class="countdown-item">
+                    <span id="hours">00</span>
+                    <label>Jam</label>
+                </div>
+                <div class="countdown-item">
+                    <span id="minutes">00</span>
+                    <label>Menit</label>
+                </div>
+                <div class="countdown-item">
+                    <span id="seconds">00</span>
+                    <label>Detik</label>
+                </div>
+            </div>
+        </section>
+
+        <section id="gift-info" class="content-section">
+            <h2 class="animate-on-scroll">Amplop Digital</h2>
+            <p class="animate-on-scroll">Bagi Bapak/Ibu/Saudara/i yang ingin memberikan hadiah, dapat melalui rekening berikut:</p>
+            <div class="bank-details animate-on-scroll">
+                <p><strong>Bank:</strong> BCA</p>
+                <p><strong>Nomor Rekening:</strong> <span id="bank-account-number">1234567890</span></p>
+                <p><strong>Atas Nama:</strong> asp-fda</p>
+                <button class="copy-button" data-copy-target="bank-account-number">
+                    <i class="fas fa-copy"></i> Salin Nomor Rekening
+                </button>
+            </div>
+        </section>
+
+        <section id="rsvp-section" class="content-section">
+            <h2 class="animate-on-scroll">Konfirmasi Kehadiran</h2>
+            <form id="rsvp-form" class="animate-on-scroll">
+                <label for="rsvp-name">Nama Lengkap:</label>
+                <input type="text" id="rsvp-name" name="name" required>
+
+                <label for="rsvp-attendance">Konfirmasi Kehadiran:</label>
+                <select id="rsvp-attendance" name="attendance" required>
+                    <option value="">Pilih</option>
+                    <option value="hadir">Hadir</option>
+                    <option value="tidak-hadir">Tidak Hadir</option>
+                </select>
+
+                <label for="rsvp-guests">Jumlah Tamu (termasuk Anda):</label>
+                <input type="number" id="rsvp-guests" name="guests" min="1" value="1" required>
+
+                <button type="submit">Kirim Konfirmasi</button>
+                <p id="rsvp-message" class="form-message"></p>
+            </form>
+        </section>
+
+        <section id="greetings-section" class="content-section">
+            <h2 class="animate-on-scroll">Kirim Ucapan & Doa</h2>
+            <form id="greeting-form" class="animate-on-scroll">
+                <label for="greeting-name">Nama Anda:</label>
+                <input type="text" id="greeting-name" name="name" required>
+
+                <label for="greeting-message">Ucapan & Doa:</label>
+                <textarea id="greeting-message" name="message" rows="5" required></textarea>
+
+                <button type="submit">Kirim Ucapan</button>
+                <p id="greeting-sent-message" class="form-message"></p>
+            </form>
+
+            <div id="wedding-greetings" class="animate-on-scroll">
+                <h3>Ucapan dari Para Tamu</h3>
+                <div id="greetings-list">
+                    <div class="greeting-item">
+                        <p class="greeting-name"></p>
+                        <p class="greeting-text"></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="closing" class="content-section">
+            <p class="animate-on-scroll">Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir.</p>
+            <p class="animate-on-scroll">Terima Kasih.</p>
+            <h2 class="animate-on-scroll">Wassalamu'alaikum Wr. Wb.</h2>
+            <p class="animate-on-scroll">Keluarga Besar Akep Sodaga Putra & Fani Dwi Ardani</p>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

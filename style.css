@@ -1,0 +1,502 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    overflow-x: hidden; /* Mencegah scroll horizontal */
+    background-color: #f9f7f4; /* Warna latar belakang lembut */
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    color: #8B4513; /* Cokelat tua untuk judul */
+}
+
+/* Cover Page */
+#cover-page {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Ganti dengan URL gambar cover pernikahanmu */
+    background: url('foto\ 1.jpeg') center center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    z-index: 1000;
+    transition: opacity 1s ease-in-out, visibility 1s ease-in-out;
+}
+
+#cover-page.fade-out {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.cover-content {
+    background-color: rgba(0, 0, 0, 0.4); /* Overlay gelap agar teks terbaca */
+    padding: 30px 50px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+
+.cover-content h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.cover-content h2 {
+    font-size: 2em;
+    margin-top: 0;
+    color: white;
+}
+
+.cover-content p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    color: white;
+}
+
+#open-invitation {
+    background-color: #8B4513; /* Cokelat tua */
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#open-invitation:hover {
+    background-color: #6a350f;
+    transform: translateY(-2px);
+}
+
+/* Main Content */
+#main-content {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    padding-top: 40px; /* Jarak atas */
+}
+
+#main-content.visible {
+    opacity: 1;
+}
+
+#main-content.hidden {
+    display: none; /* Sembunyikan sepenuhnya saat tidak aktif */
+}
+
+.content-section {
+    padding: 60px 20px;
+    max-width: 800px;
+    margin: 0 auto 40px auto; /* Margin bawah untuk pemisah antar bagian */
+    text-align: center;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    border-radius: 10px;
+}
+
+/* Hero Section */
+#hero {
+    /* Ganti dengan URL gambar hero pernikahanmu */
+    background: url('foto\ 5.jpeg') center center/cover no-repeat;
+    min-height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    border-radius: 10px;
+    margin: 40px auto;
+    max-width: 800px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.hero-text p {
+    font-size: 1.5em;
+    color: #0b50c7;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.03);
+}
+
+/* Groom & Bride Section */
+#groom-bride .couple-info {
+    margin-bottom: 20px;
+}
+
+#groom-bride h3 {
+    font-size: 2.2em;
+    margin-bottom: 5px;
+}
+
+#groom-bride p {
+    font-size: 1.1em;
+    color: #555;
+}
+
+.and-symbol {
+    font-family: 'Playfair Display', serif;
+    font-size: 3em;
+    color: #8B4513;
+    margin: 20px 0;
+    display: block; /* Memastikan simbol "&" di baris baru */
+}
+
+/* Event Details */
+.event-card {
+    background-color: #fffaf0; /* Warna krem lembut */
+    border: 1px solid #dcdcdc;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.03);
+}
+
+.event-card h3 {
+    color: #8B4513;
+    margin-top: 0;
+    font-size: 1.8em;
+}
+
+.event-card p {
+    margin-bottom: 8px;
+    font-size: 1.05em;
+}
+
+.map-button {
+    display: inline-block;
+    background-color: #28a745; /* Hijau untuk tombol peta */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 15px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.map-button:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+}
+
+/* ... (kode CSS yang sudah ada sebelumnya) ... */
+
+/* Photo Gallery Section */
+#photo-gallery {
+    /* Gaya umum untuk section, sama seperti content-section lainnya */
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsif, min 250px, max 1fr */
+    gap: 20px; /* Jarak antar gambar */
+    margin-top: 30px;
+    justify-content: center; /* Pusatkan gambar jika tidak memenuhi grid penuh */
+}
+
+.gallery-grid img {
+    width: 100%; /* Gambar akan mengisi lebar kolomnya */
+    height: 200px; /* Tinggi tetap untuk konsistensi */
+    object-fit: cover; /* Pastikan gambar mengisi area tanpa terdistorsi */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Efek hover */
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.03); /* Sedikit membesar saat di-hover */
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+/* ... (kode CSS yang sudah ada sebelumnya) ... */
+
+/* Responsive adjustments (tambahkan di bagian @media queries yang sudah ada) */
+@media (max-width: 480px) {
+    /* ... (kode CSS yang sudah ada untuk mobile) ... */
+    .gallery-grid {
+        grid-template-columns: 1fr; /* Satu kolom di layar sangat kecil */
+    }
+}
+
+/* Countdown */
+#countdown-timer {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Jarak antar item hitung mundur */
+    margin-top: 30px;
+    flex-wrap: wrap; /* Agar responsif di layar kecil */
+}
+
+.countdown-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    background-color: #fffaf0;
+    border-radius: 8px;
+    min-width: 80px; /* Lebar minimum untuk item */
+}
+
+.countdown-item span {
+    font-size: 3em;
+    font-weight: bold;
+    color: #8B4513;
+    font-family: 'Playfair Display', serif;
+}
+
+.countdown-item label {
+    font-size: 1.1em;
+    color: #555;
+    margin-top: 5px;
+}
+
+/* Gift Info */
+.bank-details {
+    background-color: #fffaf0;
+    border: 1px solid #dcdcdc;
+    padding: 25px;
+    border-radius: 8px;
+    margin-top: 30px;
+}
+
+.bank-details p {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+.bank-details strong {
+    color: #8B4513;
+}
+
+.copy-button {
+    background-color: #007bff; /* Biru */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.copy-button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+/* Forms (RSVP and Greetings) */
+form {
+    background-color: #fffaf0;
+    padding: 30px;
+    border-radius: 8px;
+    text-align: left;
+    margin-top: 30px;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.03);
+}
+
+form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+}
+
+form input[type="text"],
+form input[type="number"],
+form select,
+form textarea {
+    width: calc(100% - 22px); /* Mengakomodasi padding dan border */
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    box-sizing: border-box; /* Memastikan padding tidak menambah lebar */
+}
+
+form button[type="submit"] {
+    background-color: #8B4513;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+form button[type="submit"]:hover {
+    background-color: #6a350f;
+    transform: translateY(-2px);
+}
+
+.form-message {
+    margin-top: 15px;
+    font-weight: bold;
+    color: #28a745; /* Hijau untuk pesan sukses */
+}
+
+/* Wedding Greetings Display */
+#wedding-greetings {
+    margin-top: 40px;
+    text-align: left;
+    border-top: 1px solid #eee;
+    padding-top: 30px;
+}
+
+#wedding-greetings h3 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #8B4513;
+}
+
+#greetings-list {
+    max-height: 400px; /* Batasi tinggi untuk daftar yang bisa di-scroll */
+    overflow-y: auto; /* Aktifkan scrolling vertikal */
+    border: 1px solid #eee;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #fcfcfc;
+    box-shadow: inset 0 0 5px rgba(0,0,0,0.05); /* Sedikit bayangan di dalam */
+}
+
+.greeting-item {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.greeting-item .greeting-name {
+    font-weight: bold;
+    color: #8B4513;
+    margin-bottom: 5px;
+}
+
+.greeting-item .greeting-text {
+    color: #333;
+    font-style: italic;
+    white-space: pre-wrap; /* Mempertahankan format baris baru dari textarea */
+}
+
+/* Closing Section */
+#closing {
+    padding-bottom: 80px;
+}
+#closing p {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    color: #555;
+}
+#closing h2 {
+    font-size: 2.5em;
+    margin-top: 30px;
+}
+
+/* Scroll Animation */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.animate-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Fade-in for hero section */
+.fade-in {
+    opacity: 0;
+    transition: opacity 1.5s ease-in;
+}
+
+.fade-in.is-visible {
+    opacity: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .cover-content h1 {
+        font-size: 2.2em;
+    }
+    .cover-content h2 {
+        font-size: 1.5em;
+    }
+    .hero-text p {
+        font-size: 1.2em;
+    }
+    #groom-bride h3 {
+        font-size: 1.8em;
+    }
+    .and-symbol {
+        font-size: 2.5em;
+    }
+    .countdown-item span {
+        font-size: 2.5em;
+    }
+    .countdown-item label {
+        font-size: 0.9em;
+    }
+    .content-section {
+        padding: 40px 15px;
+    }
+    form input[type="text"],
+    form input[type="number"],
+    form select,
+    form textarea {
+        width: calc(100% - 20px); /* Sesuaikan untuk padding */
+    }
+}
+
+@media (max-width: 480px) {
+    .cover-content h1 {
+        font-size: 1.8em;
+    }
+    .cover-content h2 {
+        font-size: 1.2em;
+    }
+    #open-invitation {
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+    .hero-text p {
+        font-size: 1em;
+    }
+    #groom-bride h3 {
+        font-size: 1.5em;
+    }
+    .and-symbol {
+        font-size: 2em;
+    }
+    #countdown-timer {
+        flex-direction: column; /* Ubah ke kolom agar lebih rapi */
+        gap: 10px;
+    }
+    .countdown-item {
+        min-width: unset; /* Hapus min-width */
+        width: 100%; /* Ambil seluruh lebar */
+    }
+    .countdown-item span {
+        font-size: 2em;
+    }
+    .countdown-item label {
+        font-size: 0.8em;
+    }
+    form button[type="submit"],
+    .copy-button,
+    .map-button {
+        padding: 10px 15px;
+        font-size: 0.9em;
+    }
+}
